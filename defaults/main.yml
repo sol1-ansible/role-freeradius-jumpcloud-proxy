@@ -11,7 +11,7 @@ freeradius_clients:
   - name: switches
     iprange: 192.168.0.0/24
     nastype: cisco
-    secret: GET_IT_FROM_JUMPCLOUD_CONSOLE
+    secret: MAKE_ONE_UP_AND_CONFIGURE_DEVICES
 
 freeradius_radius_pool: jumpcloud_pool
     
