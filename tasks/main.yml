@@ -1,0 +1,7 @@
+---
+- name: Install dependency packages
+  become: yes
+  package:
+    name: "{{ freeradius_apt_install }}"
+    state: present
+- import_tasks: configure_freeradius.yml
