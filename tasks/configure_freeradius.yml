@@ -1,0 +1,18 @@
+---
+- name: Create freeradius proxy.conf
+  template:
+    src: freeradius_proxy.conf
+    dest: /etc/freeradius/3.0/proxy.conf
+  become: true
+
+- name: Create freeradius clients.conf
+  template:
+    src: freeradius_clients.conf
+    dest: /etc/freeradius/3.0/clients.conf
+  become: true
+
+- name: restart freeradius
+  systemd:
+    name: freeradius
+    state: restarted
+    enabled: true

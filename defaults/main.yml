@@ -1,0 +1,23 @@
+---
+freeradius_jumpcloud_radius_servers:
+  - name: jumpcloud_ap1
+    ip: 18.182.131.248
+    secret: GET_IT_FROM_JUMPCLOUD_CONSOLE
+  - name: jumpcloud_us1
+    ip: 18.204.0.31
+    secret: GET_IT_FROM_JUMPCLOUD_CONSOLE
+
+freeradius_clients:
+  - name: switches
+    iprange: 192.168.0.0/24
+    nastype: cisco
+    secret: GET_IT_FROM_JUMPCLOUD_CONSOLE
+
+freeradius_radius_pool: jumpcloud_pool
+    
+freeradius_jumpcloud_radius_realm: myrealm.jumpcloud.domain
+
+freeradius_apt_install:
+  - freeradius
+  - freeradius-utils
+
